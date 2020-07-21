@@ -7,16 +7,13 @@ html>
             <h1><a href="/">Shunyu's Blog</a></h1>
         </div>
 
+    {% for post in posts %}
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>爷的第一个网站，牛皮</p>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
+    {% endfor %}
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>爷的第一个网站的第二贴</p>
-        </div>
     </body>
 </html>
