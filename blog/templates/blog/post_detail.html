@@ -2,12 +2,12 @@
 
 {% block content %}
     <div class="post">
+        <h2><a href ="\" style="color:#CC00FF; font-family:宋体">{{post.title}}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
         {% if post.published_date %}
             <div class="date">
                 {{ post.published_date }}
             </div>
-        {% endif %}
-        <h2><a href ="\" style="color:red">{{post.title}}</h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+        {% endif %}  
     </div>
 {% endblock %}

@@ -1,12 +1,15 @@
+{% load static %}
 <html>
     <head>
         <title>Shunyu's blog</title>
-
     </head>
 
-    <body>
+    
+    <body style="background-image: url({% static 'img1.jpg' %});
+        background-size:100% 100%;background-repeat:no-repeat; background-attachment:scroll;">
         <div class="page-header">
-            <h1><a href="/" style="color:green" >Shunyu's Blog</a></h1>
+        <h1><a href="/" style="color:#33CCFF; font-family=Times New Roman; font-size:60px; font-style:italic; font-weight:bold">Shunyu's Blog</a></h1>
+
         </div>
         <div class="content container">
             <div class="row">

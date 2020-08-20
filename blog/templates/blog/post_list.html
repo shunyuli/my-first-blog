@@ -3,9 +3,11 @@
     {% block content %}
         {% for post in posts %}
             <div>
+                <h2><a href="{% url 'post_detail' pk=post.pk %}" style="color:#CC00FF; font-family:楷体; margin-left=100px">{{ post.title }}</a></h2>
+                <div style="color:#0033FF; font-weight:bold">
+                <p>{{ post.text|linebreaksbr }} </p>
+                <div style="color:#FFFF33">
                 <p>published: {{ post.published_date }}</p>
-                <h2><a href="{% url 'post_detail' pk=post.pk %}" style="color:blue">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
             </div>
         {% endfor %}
     {% endblock %}
