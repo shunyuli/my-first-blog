@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 
     {% block content %}
-        <div style="width:100%; Border:none; text-align:left">
+        <div style="width:85%; Border:none; text-align:left">
         {% for post in posts %}
             <div>
                 <h2><a href="{% url 'post_detail' pk=post.pk %}" style="color:#00CCFF; font-family:Times New Roman; font-weight:bold ">{{ post.title }}</a></h2>
